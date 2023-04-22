@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="custApp">
+<head>
+	<title>MCV Architecture</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("custApp",[]);
+		// Controller
+		app.controller('myCustomer', function($scope){
+			// Model
+			$scope.customer = {
+				'name' : 'Gowtham',
+				'gender' : 'Male',
+				'job' : 'Web Developer'
+			}
+		});
+	</script>
+</head>
+<body>
+	<h1>Model View Controller</h1>
+	<div ng-controller='myCustomer'>
+		<h3>{{customer.name}}</h3>
+		<h3>{{customer.gender}}</h3>
+		<h3>{{customer.job}}</h3>
+	</div>
+</body>
+</html>
